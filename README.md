@@ -2,7 +2,7 @@
 
 ## Project Overview:
 
-For this project I wanted to take a dive into some single family housing permit data in the City of Calgary.  This project consists of three parts:
+For this project I wanted to take a dive into some single family housing permit data in the City of Calgary.  This project consisted of three parts:
 
 **Part 1)** Data cleaning, wrangling, handling missing values, and removing outliers. 
 
@@ -12,7 +12,7 @@ For this project I wanted to take a dive into some single family housing permit 
 
 ## The Data:
 
-The data that I used came from the Build Permits dataset located in the City of Calgary Open Data portal. A link to this dataset can be found [here](https://data.calgary.ca/Business-and-Economic-Activity/Building-Permits/c2es-76ed).
+The data that I used came from the Building Permits dataset located in the City of Calgary Open Data portal. A link to this dataset can be found [here](https://data.calgary.ca/Business-and-Economic-Activity/Building-Permits/c2es-76ed).
 
 ## A Few Notes:
 
