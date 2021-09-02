@@ -6,13 +6,13 @@ For this project I wanted to take a dive into some single family housing permit 
 
 **Part 1)** Data cleaning, wrangling, handling missing values, and removing outliers. 
 
-**Part 2)** Exploring the data, uncovering and analyzing trends, and gaining insights into the single family housing market.
+**Part 2)** Exploring the data, uncovering and analyzing trends taking place in Calgary's single family housing market.
 
-**Part 3)** Built a cost prediction model to predict the project cost of a single family house where the user specifies the variables.
+**Part 3)** Building a cost prediction model to predict the project cost of a single family house where the user specifies the variables.
 
 ## The Data:
 
-The data that I used came from the Building Permits dataset located in the City of Calgary Open Data portal. A link to this dataset can be found [here](https://data.calgary.ca/Business-and-Economic-Activity/Building-Permits/c2es-76ed).
+The data that I used came from the Building Permits dataset located in the City of Calgary Open Data portal. A link to this dataset can be found [here](https://data.calgary.ca/Business-and-Economic-Activity/Building-Permits/c2es-76ed). Each row in the 
 
 ## A Few Notes:
 
@@ -23,5 +23,9 @@ The data that I used came from the Building Permits dataset located in the City 
 * I only looked at applications that are deemed complete, meaning that the house was actually built.
 
 * Since there are a lot of contractors and builders that operate in Calgary, I only looked at the top 10 builders by value count. This still provided a good overview of the trends in Calgary's single family real estate market as the top 10 builders make up the vast majority of the permit applications. This also reduced the number of dimensions and the likelihood of overfitting the prediction model.
+
+
+
+
 
 Still needs work...
