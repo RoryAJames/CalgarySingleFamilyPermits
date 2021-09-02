@@ -8,7 +8,7 @@ For this project I wanted to take a dive into some single family housing permit 
 
 **Part 2)** Exploring the data, uncovering and analyzing trends, and gaining insights into the single family housing market.
 
-**Part 3)** Build a cost prediction model to predict the project cost of a single family house where the user specifies the variables.
+**Part 3)** Built a cost prediction model to predict the project cost of a single family house where the user specifies the variables.
 
 ## The Data:
 
