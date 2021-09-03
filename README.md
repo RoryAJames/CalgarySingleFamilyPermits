@@ -60,10 +60,12 @@ Not surprisingly, square footage and project cost have a strong linear relations
 
 ![](https://github.com/RoryAJames/CalgarySingleFamilyPermits/blob/main/images/SquareFootageVSProjectCosts.png)
 
-Calgary is very much a sprawling city with the vast majority of single family permits being located in communities on the boundaries of the city. Only a handful of single family permits are located near the downtown area of Calgary. Additionally, the South East quadrant makes up the bulk of the single family permit activity since 2010. Lastly, some communities have only one, or very few, permits located in them. It was later discovered that 60% of all the single family permit completions are located in just the top 10 communities by value count. Since it is not practical to predict the cost of something that appears only once in the dataframe, and the fact that communities can be consolidated into quadrants, I opted to not community as a feature in the prediction model.
+Calgary is very much a sprawling city with the vast majority of single family permits being located in communities on the boundaries of the city. Only a handful of single family permits are located near the downtown area of Calgary. Additionally, the South East quadrant makes up the bulk of the single family permit activity since 2010. Lastly, some communities have only one, or very few, permits located in them. It was later discovered that 60% of all the single family permit completions are located in the top 10 communities by value count. Since it is not practical to predict the cost of something that appears only once, and the fact that communities can be consolidated into quadrants, I opted to not use community as a feature in the prediction model and go with qaudrant instead.
 
 ![](https://github.com/RoryAJames/CalgarySingleFamilyPermits/blob/main/images/map.png)
 
 ![](https://github.com/RoryAJames/CalgarySingleFamilyPermits/blob/main/images/QuadrantBreakdown.png)
 
-  More to come!
+However, when you look at the permit applications on a yearly basis you find that as of 2016 the North East qaudrant has been the more favoured quadrant amongst the top 10 builders. 
+
+![](https://github.com/RoryAJames/CalgarySingleFamilyPermits/blob/main/images/PermitApplicationsByQaudrant.png)
