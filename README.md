@@ -141,6 +141,6 @@ The gradient boosting model was then used to predict the project cost of a house
 | Square Footage        | 2750       |
 | Quadrant              | South East |
 | Latitude              |  51.15566  |
-| Latitude              |  51.15566  |
+| Longitude             | -113.93072 |
 
 Based on these attributes, the model predicted that the project cost for this house would be $451,642.30
