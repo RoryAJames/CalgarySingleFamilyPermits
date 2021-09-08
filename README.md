@@ -12,7 +12,7 @@ For this project I wanted to take a dive into some single family housing permit 
 
 ## The Data
 
-The data that I used came from the Building Permits dataset located in the City of Calgary Open Data portal. Each row in this dataset represents a building permit with a unique identifier and the permits attributes. Every single building permit that has been applied for in the City of Calgary as of 1996 is represented. At the time of writing, this amounts to nearly 383,000 building permits. A link to this dataset can be found [here](https://data.calgary.ca/Business-and-Economic-Activity/Building-Permits/c2es-76ed). 
+The data that I used came from the Building Permits dataset located in the City of Calgary Open Data portal. Each row in this dataset represents a building permit with a unique identifier and the permits attributes. Every single building permit that has been applied for in the City of Calgary as of 1996 is represented. At the time of writing, this dataset contains nearly 383,000 building permits. A link to this dataset can be found [here](https://data.calgary.ca/Business-and-Economic-Activity/Building-Permits/c2es-76ed). 
 
 ## A Few Notes
 
@@ -110,6 +110,37 @@ However, when checking for seasonality it is apparent that in one year the build
 
 ## Cost Prediction Model Building
 
+The cost prediction model was built using the application year, builder, quadrant, square footage, latitude, and longitude features. 
+
+Since latitude and longitude do not have linear effects on project cost, I decided it was best to use a tree-based regression model for predicting the cost of a permit. The three models that I compared were decision tree (base model), random forest, and gradient boosting.
+
+Categorical variables were transformed into dummy variables using one hot encoding. Dropping the first categorical column resulted in better performing models so it was used. The data was split into a train and test sets with a test size of 30%.
+
+For the decision tree and random forest models, I opted to leave the model parameters as the default to see how they perform. For the gradient boosting model I performed hyperparameter tuning using RandomizedSearchCV with five-fold cross-validation. Ten iterations of random hyperparameters were tested.
+
 ## Model Performance
 
+Model performance was measured by looking at the mean absolute error, mean squared error, root mean squared error, and R2 scores. In short, I wanted to see the mean absolute error, mean squared error, and root mean squared error scores as low as possible while having a high R2 score. Below are the model results:
+
+| Model             | Mean Absolute Error | Mean Sqaured Error  | Root Mean Sqaured Error | R2      |
+| -------------     |:-------------:      | :-----:             | :-----:                 | :-----: |
+| Decision Tree     | 8,855.39            |    232,991,400.58   |        15,264.05        | 96.13%  |
+| Random Forest     | 7,433.15            |   144,511,396.93    |        12,021.28        | 97.60%  |
+| Gradient Boosting | 7,736.33            |    138,153,821.06   |        11,753.88        | 97.70%  |
+
+All things considered, the gradient boosting model was the best performing model with the lowest mean sqaured error, root mean squared error, and the highest R2 score.
+
 ## Predicting The Project Cost of A House
+
+The gradient boosting model was then used to predict the project cost of a house with the following values:
+
+| Attribute             | Value      |
+| -------------         |:----:      |
+| Builder               |  Jayman    |
+| Application Year      | 2021       |
+| Square Footage        | 2750       |
+| Quadrant              | South East |
+| Latitude              |  51.15566  |
+| Latitude              |  51.15566  |
+
+Based on these attributes, the model predicted that the project cost for this house would be $451,642.30
