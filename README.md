@@ -70,7 +70,7 @@ However, the South East quadrant hasn't been the most favoured quadrant every ye
 
 ![](https://github.com/RoryAJames/CalgarySingleFamilyPermits/blob/main/images/PermitApplicationsByQuadrant.png)
 
-The average cost per square foot increased across all of the quadrants from the period between 2010 and 2016. From 2016 onward the average cost per square foot plateaued, and as of this year, appears to be heading downwards. There doesn't appear to be much deviation in terms of the order as well. For example, the North East has maintained the lowest average cost per sqaure foot for basically the entire dataframe.
+The average cost per square foot increased across all of the quadrants from the period between 2010 and 2016. From 2016 onward the average cost per square foot plateaued, and as of this year, appears to be heading downwards. There doesn't appear to be much deviation in terms of the order as well. For example, the North East has maintained the lowest average cost per square foot for basically the entire dataframe.
 
 ![](https://github.com/RoryAJames/CalgarySingleFamilyPermits/blob/main/images/AverageCostPerSquareFootQuadrant.png)
 
