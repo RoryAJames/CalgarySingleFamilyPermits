@@ -40,7 +40,7 @@ After gathering the data, I needed to clean it up so that I could analyze it, an
 
 * Renamed the builders from their legal names to their marketing names.
 
-* Added a cost per sqaure foot column.
+* Added a cost per square foot column.
 
 * Added a construction duration column (the number of days between when a permit was issued and when it is deemed complete).
 
@@ -50,7 +50,7 @@ After gathering the data, I needed to clean it up so that I could analyze it, an
 
 * Removed rows where there were missing values (less than 1% of values were missing).
 
-* Removed the outliers that appeared in the sqaure footage vs project cost scatter plot.
+* Removed the outliers that appeared in the square footage vs project cost scatter plot.
 
 ## Exploratory Data Analysis
 
@@ -60,13 +60,13 @@ Not surprisingly, square footage and project cost have a strong linear relations
 
 ![](https://github.com/RoryAJames/CalgarySingleFamilyPermits/blob/main/images/SquareFootageVSProjectCosts.png)
 
-Calgary is very much a sprawling city with the vast majority of single family permits being located in communities on the boundaries of the city. Only a handful of single family permits are located near the downtown area. Additionally, the South East quadrant makes up the bulk of the single family permit activity since 2010. Lastly, some communities have only one, or very few, permits located in them. It was later discovered that 60% of all the single family permit completions are located in the top 10 communities by value count. Since it is not practical to predict the cost of something that appears only once, along with the knowledge that communities can be consolidated into quadrants, I opted to not use community as a feature in the prediction model and go with the qaudrant feature instead.
+Calgary is very much a sprawling city with the vast majority of single family permits being located in communities on the boundaries of the city. Only a handful of single family permits are located near the downtown area. Additionally, the South East quadrant makes up the bulk of the single family permit activity since 2010. Lastly, some communities have only one, or very few, permits located in them. It was later discovered that 60% of all the single family permit completions are located in the top 10 communities by value count. Since it is not practical to predict the cost of something that appears only once, along with the knowledge that communities can be consolidated into quadrants, I opted to not use community as a feature in the prediction model and go with the quadrant feature instead.
 
 ![](https://github.com/RoryAJames/CalgarySingleFamilyPermits/blob/main/images/map.png)
 
 ![](https://github.com/RoryAJames/CalgarySingleFamilyPermits/blob/main/images/QuadrantBreakdown.png)
 
-However, the South East quadrant hasn't been the most favoured quadrant every year. When you look at the permit applications over time, you find that as of 2016 the North East qaudrant has been the more favoured quadrant amongst the top 10 builders. It also appears that the trend line for yearly permit applications has been downward as of 2014. At the time of working on this project, very few permits were completed in the current year. This explains why there is a drastic drop off at the end of the graph.
+However, the South East quadrant hasn't been the most favoured quadrant every year. When you look at the permit applications over time, you find that as of 2016 the North East quadrant has been the more favoured quadrant amongst the top 10 builders. It also appears that the trend line for yearly permit applications has been downward as of 2014. At the time of working on this project, very few permits were completed in the current year. This explains why there is a drastic drop off at the end of the graph.
 
 ![](https://github.com/RoryAJames/CalgarySingleFamilyPermits/blob/main/images/PermitApplicationsByQuadrant.png)
 
@@ -122,13 +122,13 @@ For the decision tree and random forest models, I opted to leave the model param
 
 Model performance was measured by looking at the mean absolute error, mean squared error, root mean squared error, and R2 scores. In short, I wanted to see the mean absolute error, mean squared error, and root mean squared error scores as low as possible while having a high R2 score. Below are the model results:
 
-| Model             | Mean Absolute Error | Mean Sqaured Error  | Root Mean Sqaured Error | R2      |
+| Model             | Mean Absolute Error | Mean Squared Error  | Root Mean Squared Error | R2      |
 | -------------     |:-------------:      | :-----:             | :-----:                 | :-----: |
 | Decision Tree     | 8,855.39            |    232,991,400.58   |        15,264.05        | 96.13%  |
 | Random Forest     | 7,433.15            |   144,511,396.93    |        12,021.28        | 97.60%  |
 | Gradient Boosting | 7,736.33            |    138,153,821.06   |        11,753.88        | 97.70%  |
 
-All things considered, the gradient boosting model was the best performing model with the lowest mean sqaured error, root mean squared error, and the highest R2 score.
+All things considered, the gradient boosting model was the best performing model with the lowest mean squared error, root mean squared error, and the highest R2 score.
 
 ## Predicting The Project Cost of A House
 
